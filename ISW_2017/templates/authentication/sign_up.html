@@ -1,0 +1,16 @@
+{% block title %}Sign up{% endblock %}
+
+<div id="content-container" class="container p-none">
+    <div class="lgn-container col-lg-8">
+
+        <form method="POST" action="">
+            {% csrf_token %}
+
+            {{ form.as_p }}
+
+            <input type="submit" value="Submit">
+            <input type="reset" value="Reset">
+
+        </form>
+    </div>
+</div>

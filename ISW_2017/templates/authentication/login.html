@@ -1,0 +1,32 @@
+{% block title %}Login{% endblock %}
+
+<div id="content-container" class="container p-none">
+    <div class="lgn-container col-lg-8">
+
+        <form method="POST" action="">
+            {% csrf_token %}
+
+            {% if login_error %}
+                <p class="errors">
+                    {{ login_error }}
+                </p>
+            {% endif %}
+
+
+            <table class="table">
+                <tr>
+                    <td><label for="email">Email</label></td>
+                    <td><input id="email" name="email"
+                               type="email" placeholder="mario@example.com" required></td>
+                </tr>
+                <tr>
+                    <td><label for="password">Password</label></td>
+                    <td><input id="password" name="password"
+                               type="password" placeholder="*****" required></td>
+                </tr>
+            </table>
+
+            <input type="submit" value="login"/>
+        </form>
+    </div>
+</div>
